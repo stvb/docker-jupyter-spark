@@ -9,7 +9,7 @@ ENTRYPOINT ["/tini", "--"]
 
 
 RUN apt-get -y update && \
-    apt-get install -y --no-install-recommends openjdk-8-jdk-headless python python-dev python-pip  python3 build-essential python3-dev python3-pip libssl-dev libffi-dev && \
+    apt-get install -y --no-install-recommends wget openjdk-8-jdk-headless python python-dev python-pip  python3 build-essential python3-dev python3-pip libssl-dev libffi-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
