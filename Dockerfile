@@ -21,7 +21,7 @@ RUN ./dev/make-distribution.sh --name spark-swift -Phadoop-2.7
 RUN pip3 install py4j jupyter bravado numpy
 
 # Environment
-ENV SPARK_HOME spark-2.0.0/dist
+ENV SPARK_HOME /spark-2.0.0/dist
 ENV PYTHONPATH $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip
 ENV SPARK_OPTS --driver-java-options=-Xms1024M --driver-java-options=-Xmx4096M --driver-java-options=-Dlog4j.logLevel=info
 
